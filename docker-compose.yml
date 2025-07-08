@@ -5,7 +5,7 @@ services:
     build: ./Backend
     container_name: attendance-backend64
     ports:
-      - "3021:3021"
+      - "3603:3603"
     depends_on:
       - postgres
     environment:
@@ -21,7 +21,7 @@ services:
     build: ./Employee-Attendance
     container_name: attendance-employee64
     ports:
-      - "8037:80"
+      - "8606:80"
     depends_on:
       - backend
 
@@ -29,7 +29,7 @@ services:
     build: ./HR-Attendance
     container_name: attendance-hr64
     ports:
-      - "8038:80"
+      - "8607:80"
     depends_on:
       - backend
 
@@ -37,7 +37,7 @@ services:
     image: postgres:13
     container_name: attendance-db64
     ports:
-      - "5416:5432"
+      - "5603:5432"
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=admin123
